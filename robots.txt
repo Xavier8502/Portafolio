@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xavier8502.github.io/Portafolio/sitemap.xml
+Sitemap: https://portafolio-cal.pages.dev/sitemap.xml

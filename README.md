@@ -12,17 +12,19 @@ python -m http.server 8080
 
 Luego visita http://localhost:8080.
 
-## Publicación: GitHub Pages
+## Publicación: Cloudflare Pages
 
-Este repositorio está preparado para desplegarse con GitHub Actions.
+El sitio se publica en **Cloudflare Pages**: https://portafolio-cal.pages.dev/
 
-1. En GitHub abre **Settings → Pages**.
-2. En **Build and deployment**, selecciona **GitHub Actions** como Source.
-3. Fusiona los cambios de `feature/portfolio-v2` en `main`.
-4. El workflow `.github/workflows/pages.yml` validará los archivos y publicará el sitio.
-5. Consulta **Actions** para verificar el resultado del despliegue.
+La integración recomendada es conectar este repositorio desde Cloudflare Pages mediante **Workers & Pages → Create → Pages → Connect to Git**:
 
-URL esperada del proyecto: https://xavier8502.github.io/Portafolio/
+- Production branch: `main`
+- Build command: dejar vacío (sitio estático sin build).
+- Build output directory: `/` (raíz del repositorio).
+
+Cloudflare realizará el despliegue de producción al recibir cambios en `main`. Las ramas/PR pueden generar Preview Deployments si están habilitados en la configuración del proyecto.
+
+GitHub Actions ejecuta validaciones de calidad en cada Pull Request y push a `main`; no publica en GitHub Pages ni mantiene un segundo hosting.
 
 ## Estructura
 
@@ -31,11 +33,11 @@ URL esperada del proyecto: https://xavier8502.github.io/Portafolio/
 - `script.js`: interacciones pequeñas sin dependencias.
 - `assets/`: fotografía, favicon e imagen Open Graph.
 - `sitemap.xml` y `robots.txt`: descubrimiento por buscadores.
-- `.github/workflows/pages.yml`: CI/CD de GitHub Pages.
+- `.github/workflows/ci.yml`: validación del sitio.
 
 ## Fotografía profesional
 
-El archivo actual `assets/profile-placeholder.svg` es un placeholder de marca JP. Reemplázalo por la fotografía profesional autorizada y actualiza la referencia en `index.html` a `assets/javier-piratova.webp`. No se debe usar una fotografía generada que altere la identidad del titular.
+La fotografía profesional de Javier fue recibida para esta actualización, pero todavía debe incorporarse como archivo binario en `assets/javier-piratova.webp`. Mientras tanto, la página conserva el monograma JP para evitar una referencia rota. Una vez agregado el archivo, actualizar el `src` del elemento de perfil en `index.html`.
 
 ## Contenido y privacidad
 
