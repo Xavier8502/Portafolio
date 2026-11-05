@@ -1,24 +1,42 @@
 # Javier Piratova — Professional Portfolio
 
-Sitio estático responsive en HTML, CSS y JavaScript vanilla. No requiere Node.js, build ni backend.
+Portafolio profesional estático en HTML5, CSS3 y JavaScript vanilla. No requiere Node.js, framework, backend ni dependencias de runtime.
 
-## Vista local
+## Desarrollo local
 
-Abre `index.html` en el navegador o ejecuta `python -m http.server 8080` desde esta carpeta y visita http://localhost:8080.
+Abre `index.html` en el navegador o ejecuta:
 
-## Publicar gratis en Cloudflare Pages (recomendado)
+```bash
+python -m http.server 8080
+```
 
-1. Crea una cuenta en https://dash.cloudflare.com/.
-2. Abre **Workers & Pages** → **Create** → **Pages** → **Upload assets** (Direct Upload).
-3. Sube el contenido de esta carpeta: `index.html`, `styles.css`, `script.js` y `assets/`.
-4. Elige un nombre, por ejemplo `javier-piratova`.
-5. Cloudflare te dará una URL similar a `https://javier-piratova.pages.dev` (si está disponible).
+Luego visita http://localhost:8080.
 
-También puedes conectar un repositorio Git para desplegar automáticamente con cada push.
+## Publicación: GitHub Pages
 
-## Antes de publicar
+Este repositorio está preparado para desplegarse con GitHub Actions.
 
-- Confirma que el teléfono, correo y LinkedIn son los que deseas hacer públicos.
-- Reemplaza el enlace general de Superprof por la URL exacta de tu perfil.
-- Revisa el PDF del CV incluido.
-- Si quieres, añade una fotografía profesional para personalizar la portada.
+1. En GitHub abre **Settings → Pages**.
+2. En **Build and deployment**, selecciona **GitHub Actions** como Source.
+3. Fusiona los cambios de `feature/portfolio-v2` en `main`.
+4. El workflow `.github/workflows/pages.yml` validará los archivos y publicará el sitio.
+5. Consulta **Actions** para verificar el resultado del despliegue.
+
+URL esperada del proyecto: https://xavier8502.github.io/Portafolio/
+
+## Estructura
+
+- `index.html`: contenido, metadatos SEO y datos estructurados.
+- `styles.css`: diseño responsive, accesibilidad y estilos.
+- `script.js`: interacciones pequeñas sin dependencias.
+- `assets/`: fotografía, favicon e imagen Open Graph.
+- `sitemap.xml` y `robots.txt`: descubrimiento por buscadores.
+- `.github/workflows/pages.yml`: CI/CD de GitHub Pages.
+
+## Fotografía profesional
+
+El archivo actual `assets/profile-placeholder.svg` es un placeholder de marca JP. Reemplázalo por la fotografía profesional autorizada y actualiza la referencia en `index.html` a `assets/javier-piratova.webp`. No se debe usar una fotografía generada que altere la identidad del titular.
+
+## Contenido y privacidad
+
+Los proyectos se describen como casos anonimizados de experiencia profesional. No incluir código, datos, diagramas internos, nombres de clientes ni métricas no autorizadas.
