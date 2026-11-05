@@ -33,11 +33,11 @@ GitHub Actions ejecuta validaciones de calidad en cada Pull Request y push a `ma
 - `script.js`: interacciones pequeñas sin dependencias.
 - `assets/`: fotografía, favicon e imagen Open Graph.
 - `sitemap.xml` y `robots.txt`: descubrimiento por buscadores.
-- `.github/workflows/ci.yml`: validación del sitio.
+- ``.github/workflows/ci.yml``: validación del sitio.
 
 ## Fotografía profesional
 
-La fotografía de perfil se encuentra en `assets/javier-piratova.webp`. Mantener la imagen original del titular sin alterar su identidad.
+La fotografía profesional de Javier fue recibida para esta actualización, pero todavía debe incorporarse como archivo binario en `assets/javier-piratova.webp`. Mientras tanto, la página conserva el monograma JP para evitar una referencia rota. Una vez agregado el archivo, actualizar el `src` del elemento de perfil en `index.html`.
 
 ## Contenido y privacidad
 
