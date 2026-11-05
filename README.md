@@ -33,7 +33,7 @@ GitHub Actions ejecuta validaciones de calidad en cada Pull Request y push a `ma
 - `script.js`: interacciones pequeñas sin dependencias.
 - `assets/`: fotografía, favicon e imagen Open Graph.
 - `sitemap.xml` y `robots.txt`: descubrimiento por buscadores.
-- ``.github/workflows/ci.yml``: validación del sitio.
+- `.github/workflows/ci.yml`: validación del sitio.
 
 ## Fotografía profesional
 
