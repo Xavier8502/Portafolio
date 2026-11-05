@@ -35,9 +35,18 @@ GitHub Actions ejecuta validaciones de calidad en cada Pull Request y push a `ma
 - `sitemap.xml` y `robots.txt`: descubrimiento por buscadores.
 - `.github/workflows/ci.yml`: validación del sitio.
 
+## SEO e indexación
+
+- Canonical, Open Graph, Twitter Cards y metadatos descriptivos en `index.html`.
+- Datos estructurados Schema.org `Person` y `WebSite`.
+- `robots.txt` permite el rastreo y declara el sitemap.
+- `sitemap.xml` declara la página principal y la fotografía de perfil.
+- Dominio canónico actual: `https://portafolio-cal.pages.dev/`.
+- Tras publicar cambios, enviar el sitemap en Google Search Console y solicitar la indexación de la URL principal.
+
 ## Fotografía profesional
 
-La fotografía profesional de Javier fue recibida para esta actualización, pero todavía debe incorporarse como archivo binario en `assets/javier-piratova.webp`. Mientras tanto, la página conserva el monograma JP para evitar una referencia rota. Una vez agregado el archivo, actualizar el `src` del elemento de perfil en `index.html`.
+La fotografía profesional se publica en `assets/javier-piratova.webp` y se utiliza en el hero y en los datos estructurados.
 
 ## Contenido y privacidad
 
